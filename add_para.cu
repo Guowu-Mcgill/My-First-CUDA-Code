@@ -35,7 +35,7 @@ int main(void)
   int blockSize = 256;
   int numBlock = (N + blockSize - 1) / blockSize;
   add<<<numBlock, blockSize>>>(N, x, y);
-  std::cout << "NumBlock: " << numBlock << ", blockSize: " << blockSize << std::endl;
+  //std::cout << "NumBlock: " << numBlock << ", blockSize: " << blockSize << std::endl;
 
   // Wait for GPU to finish before accessing on host
   // CPU需要等待cuda上的代码运行完毕，才能对数据进行读取
